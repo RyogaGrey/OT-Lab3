@@ -9,7 +9,7 @@ import os
 load_dotenv('.venv/.env')
 
 # Получение токена и версии API из окружения
-TOKEN = os.getenv("VK_TOKEN")
+TOKEN = os.getenv("SERV_VK_TOKEN")
 API_VERSION = os.getenv("VK_API_VERSION")
 
 def get_vk_data(user_id, token):
