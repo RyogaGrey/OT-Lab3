@@ -4,13 +4,18 @@ import sys
 import argparse
 import logging
 from neo4j import GraphDatabase
+from dotenv import load_dotenv
+import os
+
+# Загрузка переменных из .env файла
+load_dotenv()
 
 # Настройки VK API и Neo4j
-TOKEN = 'YOUR_ACCESS_TOKEN'
-API_VERSION = '5.131'
-NEO4J_URI = "neo4j://localhost:7687"  # URI вашей базы данных Neo4j
-NEO4J_USER = "neo4j"  # Имя пользователя для подключения к Neo4j
-NEO4J_PASSWORD = "password"  # Пароль для подключения к Neo4j
+TOKEN = os.getenv("VK_TOKEN")
+API_VERSION = os.getenv("VK_API_VERSION", "5.131")
+NEO4J_URI = os.getenv("NEO4J_URI")
+NEO4J_USER = os.getenv("NEO4J_USER")
+NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
 
 # Настройка логирования
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
