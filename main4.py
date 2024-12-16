@@ -8,11 +8,11 @@ from dotenv import load_dotenv
 import os
 
 # Загрузка переменных из .env файла
-load_dotenv()
+load_dotenv('.venv/.env')
 
 # Настройки VK API и Neo4j
-TOKEN = os.getenv("VK_TOKEN")
-API_VERSION = os.getenv("VK_API_VERSION", "5.131")
+TOKEN = os.getenv("SERV_VK_TOKEN")
+API_VERSION = os.getenv("VK_API_VERSION")
 NEO4J_URI = os.getenv("NEO4J_URI")
 NEO4J_USER = os.getenv("NEO4J_USER")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
