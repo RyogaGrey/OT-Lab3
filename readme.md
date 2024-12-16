@@ -16,7 +16,7 @@
 
 1. Cклонируйте репозиторий:
    ```bash
-   git clone https://github.com/your-repo/vk-user-fetcher.git
+   git clone https://github.com/RyogaGrey/OT-Lab3.git
    cd vk-user-fetcher
    ```
 2. Создайте и заполните файл .env (.venv/.env) в корне проекта:
@@ -24,7 +24,6 @@
 ```
    SERV_VK_TOKEN=
    VK_API_VERSION=5.199
-   NEO4J_URI=neo4j://localhost:7687
 ```
 3. Установите зависимости
 
